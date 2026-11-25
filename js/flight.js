@@ -115,8 +115,7 @@ function setupGeomery(geom)
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW)
 
-    return 
-    {
+    return {
         mode: gl.TRIANGLES,
         count: indices.length,
         type: gl.UNSIGNED_SHORT,
@@ -264,8 +263,7 @@ function generateTerrain(gridsize, faults)
         }
     }
 
-    return 
-    {
+    return {
         triangles: triangles,
         attributes: [positions, normals]
     }
