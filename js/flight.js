@@ -47,7 +47,8 @@ async function setup()
  * @param {string} fs_source - the source code of the fragment shader
  * @return {WebGLProgram} the compiled and linked program
  */
-function compile(vs_source, fs_source) {
+function compile(vs_source, fs_source) 
+{
     const vs = gl.createShader(gl.VERTEX_SHADER)
     gl.shaderSource(vs, vs_source)
     gl.compileShader(vs)
@@ -114,7 +115,8 @@ function setupGeomery(geom)
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indices, gl.STATIC_DRAW)
 
-    return {
+    return 
+    {
         mode: gl.TRIANGLES,
         count: indices.length,
         type: gl.UNSIGNED_SHORT,
@@ -136,9 +138,6 @@ function fillScreen()
     window.p = m4perspNegZ(0.05, 20, 1.0, canvas.width, canvas.height)
 }
 
-/**
- * Rotate vector v around unit axis by angle (Rodrigues).
- */
 function rotateAround(v, axis, angle)
 {
     const c = Math.cos(angle)
@@ -184,9 +183,6 @@ function updateCamera(dt)
     window.forward = forward
 }
 
-/**
- * Build a gridsize-by-gridsize heightfield with faulting or a hemisphere.
- */
 function generateTerrain(gridsize, faults)
 {
     const n = gridsize
@@ -268,16 +264,13 @@ function generateTerrain(gridsize, faults)
         }
     }
 
-    return {
+    return 
+    {
         triangles: triangles,
         attributes: [positions, normals]
     }
 }
 
-/**
- * Grid-based normals: (n - s) x (w - e), using v for missing neighbors.
- * Row 0 is north (-Z) so the cross product points +Y on a flat grid.
- */
 function computeGridNormals(positions, n)
 {
     const normals = new Array(n * n)
