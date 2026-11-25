@@ -1,2 +1,2 @@
-# flight
-Auto-generate a terrain (with no user input). Respond to keys to move and rotate the camera
+# drive
+Auto-generate terrain and drive across it with keyboard controls. Camera stays a fixed height above the ground with per-fragment specular highlights.
