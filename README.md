@@ -1,2 +1,2 @@
-# flight
-Auto-generate a terrain (with no user input). Respond to keys to move and rotate the camera
+# fog
+Flight with exponential distance fog. WASD/arrows fly; G/H adjust fog density; F toggles fog.
